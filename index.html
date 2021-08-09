@@ -32,16 +32,17 @@
                         async: true,
                         url: "https://qb.xiaodaocj.xyz/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
                         dataType: "string",
-                        success: function(domain) {
-				alert(domain);
+                        success: function(data) {
+				alert(data);
                             if (!ojbk) {
-				
                                 ojbk = true;
                                 var gotoUrl = "http://" + domain + longurl;
                                 window.location.replace(gotoUrl)
                             }
                         },
                         error: function() {
+				alert(data);
+				
                             if (!ojbk) {
                                 ojbk = true;
                                 $("#msg").html("获取最新域名失败")
