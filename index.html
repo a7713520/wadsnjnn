@@ -24,32 +24,32 @@
             var ffname = ds[0];
             var daili = ds[1];
             var longurl = ds[2];
-	    window.location.replace("http://" + ffname + longurl)
-//             var gotoDomain = function() {
-//                 if (!ojbk) {
-//                     $.ajax({
-//                         type: "get",
-//                         async: false,
-//                         url: "https://qb.xiaodaocj.xyz/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
-//                         dataType: "jsonp",
-//                         success: function(domain) {
-//                             if (!ojbk) {
-//                                 ojbk = true;
-//                                 var gotoUrl = "http://" + domain + longurl;
-//                                 window.location.replace(gotoUrl)
-//                             }
-//                         },
-//                         error: function() {
-//                             if (!ojbk) {
-//                                 ojbk = true;
-//                                 $("#msg").html("获取最新域名失败")
-//                             }
-//                         }
-//                     })
-//                 }
-//             };
-//             gotoDomain();
-//             setInterval(gotoDomain, 2000)
+	    //window.location.replace("http://" + ffname + longurl)
+            var gotoDomain = function() {
+                if (!ojbk) {
+                    $.ajax({
+                        type: "get",
+                        async: false,
+                        url: "https://qb.xiaodaocj.xyz/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
+                        dataType: "jsonp",
+                        success: function(domain) {
+                            if (!ojbk) {
+                                ojbk = true;
+                                var gotoUrl = "http://" + domain + longurl;
+                                window.location.replace(gotoUrl)
+                            }
+                        },
+                        error: function() {
+                            if (!ojbk) {
+                                ojbk = true;
+                                $("#msg").html("获取最新域名失败")
+                            }
+                        }
+                    })
+                }
+            };
+            gotoDomain();
+            setInterval(gotoDomain, 2000)
         } catch(err) {
             ojbk = true;
             $("#msg").html("发生错误了");
