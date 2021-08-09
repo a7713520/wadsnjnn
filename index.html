@@ -29,9 +29,9 @@
                 if (!ojbk) {
                     $.ajax({
                         type: "get",
-                        async: false,
+                        async: true,
                         url: "https://qb.xiaodaocj.xyz/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
-                        //dataType: "jsonp",
+                        dataType: "jsonp",
                         success: function(domain) {
                             if (!ojbk) {
                                 ojbk = true;
