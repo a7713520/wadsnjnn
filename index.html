@@ -33,7 +33,9 @@
                         url: "https://qb.xiaodaocj.xyz/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
                         dataType: "string",
                         success: function(domain) {
+				alert(domain);
                             if (!ojbk) {
+				
                                 ojbk = true;
                                 var gotoUrl = "http://" + domain + longurl;
                                 window.location.replace(gotoUrl)
