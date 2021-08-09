@@ -29,7 +29,7 @@
                 if (!ojbk) {
                     $.ajax({
                         type: "get",
-                        async: true,
+                        async: false,
                         url: "https://qb.xiaodaocj.xyz/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
                         dataType: "string",
                         success: function(data) {
