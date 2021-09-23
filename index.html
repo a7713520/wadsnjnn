@@ -24,13 +24,12 @@
             var ffname = ds[0];
             var daili = ds[1];
             var longurl = ds[2];
-	    //window.location.replace("http://" + ffname + longurl)
             var gotoDomain = function() {
                 if (!ojbk) {
                     $.ajax({
                         type: "get",
                         async: false,
-                        url: "https://qb.xiaodaocj.xyz/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
+                        url: "https://k1.xmmlkb.cyou/api/auth/domain?daili=" + daili + "&ffname=" + ffname,
                         //dataType: "string",
                         success: function(domain) {
                             if (!ojbk) {
